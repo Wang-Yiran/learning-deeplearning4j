@@ -57,7 +57,7 @@ public class MultiRegression {
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
                 .weightInit(WeightInit.XAVIER)
                 .updater(Updater.SGD)
-                .biasLearningRate(learningRate)
+                .learningRate(learningRate)
                 .list()
                 .layer(0, new OutputLayer.Builder(LossFunctions.LossFunction.MSE)
                         .activation(Activation.IDENTITY)
