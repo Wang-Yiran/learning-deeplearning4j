@@ -92,7 +92,8 @@ public class SingleRegression {
                  * 去吴恩达->网易云课堂->微专业
                  */
                 .updater(Updater.SGD)
-                .biasLearningRate(learningRate)
+                .learningRate(learningRate)
+//                .biasLearningRate(learningRate)
                 .list()
                 .layer(0, new OutputLayer.Builder(LossFunctions.LossFunction.MSE)
                         /**
@@ -151,6 +152,7 @@ public class SingleRegression {
              * java8实战 -> 图灵社区
              * java 14年出来的
              */
+//            params.forEach((key, value) -> System.out.println("key:" + key +", value = " + value.getDouble(0)));
             params.forEach((key, value) -> System.out.println("key:" + key +", value = " + value));
 
         }
@@ -176,7 +178,7 @@ public class SingleRegression {
         for (int i= 0; i< nSamples; i++) {
             input[i] = MIN_RANGE + (MAX_RANGE - MIN_RANGE) * rand.nextDouble();
 
-            output[i] = 0.5 * input[i] + 0.1;
+            output[i] = 0.5 * input[i] + 0.1; //+ Math.random() - 0.5;
         }
 
         /**
