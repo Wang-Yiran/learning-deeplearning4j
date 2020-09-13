@@ -25,3 +25,7 @@ hs_err_pid*
 .idea
 backup
 target
+/src/main/resources/doc/
+/src/main/resources/MNIST/
+/src/main/resources/mnist-images/
+/src/main/resources/model/
